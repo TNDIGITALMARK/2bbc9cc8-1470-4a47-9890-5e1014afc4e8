@@ -1,17 +1,6 @@
 'use client';
 
-import { useState } from 'react';
-
 export default function CTASection() {
-  const [email, setEmail] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Redirect to Kiwify payment page
-    window.open('https://pay.kiwify.com.br/BXkOCLE', '_blank');
-  };
-
   const handleDirectCTA = () => {
     window.open('https://pay.kiwify.com.br/BXkOCLE', '_blank');
   };
@@ -28,32 +17,14 @@ export default function CTASection() {
             Não espere o momento perfeito — <span className="text-[#FFD700] font-semibold">crie o seu momento</span>
           </p>
 
-          {/* Lead Capture Form */}
+          {/* Direct CTA Button */}
           <div className="max-w-xl mx-auto mb-12">
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <input
-                type="email"
-                placeholder="Digite seu melhor e-mail"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="w-full px-6 py-4 rounded-full bg-[#252525] border border-[#FFD700] text-white placeholder-[#888] focus:outline-none focus:ring-2 focus:ring-[#FFD700]"
-              />
-              <button
-                type="submit"
-                className="btn-gold w-full text-lg py-4"
-              >
-                Quero Começar Agora
-              </button>
-            </form>
-
-            {isSubmitted && (
-              <div className="mt-4 p-4 bg-[#FFD700]/20 border border-[#FFD700] rounded-lg">
-                <p className="text-[#FFD700] font-semibold">
-                  Sucesso! Em breve você receberá mais informações sobre o e-book.
-                </p>
-              </div>
-            )}
+            <button
+              onClick={handleDirectCTA}
+              className="btn-gold w-full text-lg py-4"
+            >
+              Quero Começar Agora
+            </button>
           </div>
 
           {/* Trust Badges */}
