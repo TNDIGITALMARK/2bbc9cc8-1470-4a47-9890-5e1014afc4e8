@@ -54,7 +54,7 @@ export default function CTASection() {
             <p className="text-[#cccccc] text-lg mb-2">Valor Promocional</p>
             <div className="flex items-center justify-center space-x-4">
               <span className="text-[#888] line-through text-2xl">R$ 197,00</span>
-              <span className="text-[#FFD700] text-5xl font-bold">R$ 97,00</span>
+              <span className="text-[#FFD700] text-5xl font-bold">R$ 59,90</span>
             </div>
             <p className="text-[#cccccc] mt-4">
               Oferta por tempo limitado • Acesso vitalício ao conteúdo
