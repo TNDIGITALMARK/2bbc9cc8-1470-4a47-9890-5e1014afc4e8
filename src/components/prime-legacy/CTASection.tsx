@@ -8,13 +8,12 @@ export default function CTASection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In production, this would send to an API
-    console.log('Email submitted:', email);
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setEmail('');
-    }, 3000);
+    // Redirect to Kiwify payment page
+    window.open('https://pay.kiwify.com.br/BXkOCLE', '_blank');
+  };
+
+  const handleDirectCTA = () => {
+    window.open('https://pay.kiwify.com.br/BXkOCLE', '_blank');
   };
 
   return (
@@ -44,7 +43,7 @@ export default function CTASection() {
                 type="submit"
                 className="btn-gold w-full text-lg py-4"
               >
-                {isSubmitted ? '✓ Email Cadastrado!' : 'Quero Começar com a Prime Legacy'}
+                Quero Começar Agora
               </button>
             </form>
 

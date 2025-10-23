@@ -14,6 +14,10 @@ export default function Header() {
     }
   };
 
+  const handleCTAClick = () => {
+    window.open('https://pay.kiwify.com.br/BXkOCLE', '_blank');
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#1a1a1a] border-b border-[#FFD700]/20">
       <nav className="container mx-auto px-6 py-4">
@@ -53,7 +57,7 @@ export default function Header() {
               Contato
             </button>
             <button
-              onClick={() => scrollToSection('cta-final')}
+              onClick={handleCTAClick}
               className="btn-gold"
             >
               Começar Agora
@@ -111,7 +115,7 @@ export default function Header() {
               Contato
             </button>
             <button
-              onClick={() => scrollToSection('cta-final')}
+              onClick={handleCTAClick}
               className="btn-gold w-full"
             >
               Começar Agora

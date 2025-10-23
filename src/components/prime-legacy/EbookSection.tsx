@@ -1,11 +1,8 @@
 'use client';
 
 export default function EbookSection() {
-  const scrollToCTA = () => {
-    const element = document.getElementById('cta-final');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleCTAClick = () => {
+    window.open('https://pay.kiwify.com.br/BXkOCLE', '_blank');
   };
 
   return (
@@ -110,10 +107,10 @@ export default function EbookSection() {
         {/* CTA Button */}
         <div className="text-center">
           <button
-            onClick={scrollToCTA}
+            onClick={handleCTAClick}
             className="btn-gold text-lg px-8 py-4"
           >
-            Garantir Meu Acesso Agora
+            Começar Agora
           </button>
         </div>
 
